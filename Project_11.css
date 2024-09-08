@@ -1,0 +1,141 @@
+body{
+    margin:0px;
+    background:linear-gradient(to left, #7c0dd6, rgb(100, 100, 236), rgb(118, 162, 238) 70%);
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    gap:30px;
+
+}
+.container{
+
+    background-color:white;
+    padding:20px; 
+    width:45%;
+    border-radius:20px;
+    box-sizing: border-box;
+    
+
+     
+}
+
+.container .heading{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:impact;
+    font-size:40px;
+    margin-bottom:40px;
+    background:linear-gradient(to left, #7c0dd6, rgb(100, 100, 236), rgb(118, 162, 238) 70%);
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    transition:font-size 1s ease;
+}
+
+.container .row-element{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin-bottom:40px;
+    gap:35px;
+    
+}
+
+.container .row-element .input-data input,
+.container .row-element .input-data textarea{
+    width:100%;
+    height:35px;
+    resize:none;
+    border:none;
+    border-bottom:1px solid rgb(189, 185, 185);
+    transition:all 1s ease;
+    box-sizing: border-box;
+}
+
+.container .row-element .input-data{
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    
+}
+.row-element{
+    justify-content:space-around;
+}  
+.row-element .input-data label{
+    position:absolute;
+    margin-bottom:10px;
+    transition:all .5s ease;
+}
+.input-data input:focus~label,
+.input-data textarea:focus~label,
+.input-data input:valid~label,
+.input-data textarea:valid~label{
+    transform:translateY(-20px);
+    font-size:14px;
+    color:rgb(61, 191, 208);
+
+
+}
+.submit input{
+    font-family:impact;
+    font-size:15px;
+    padding:5px 10px;
+    background:linear-gradient((to left, #7c0dd6, rgb(100, 100, 236), rgb(118, 162, 238) 70%));
+    background-clip:text;
+
+    
+}
+input,textarea{
+    outline:none;
+    border:1px solid;
+    transition:border .1s;
+}
+input:focus{
+    border:0px;
+}
+
+.underline{
+    height:2px;
+    background:rgb(75, 189, 238);
+    transform:scaleX(0);
+    transition:transform .5s ease;
+}
+.input-data input:focus~.underline,
+.input-data textarea:focus~.underline{
+    transform: scale(1);
+    transform-origin:center;
+
+}
+input:invalid{
+    border-bottom:1px solid red;
+}
+@media screen and (max-width:1000px){
+    .container .heading{
+        font-size:30px;
+    
+    }
+}
+@media screen and (max-width:550px){
+    .container .heading{
+        font-size:20px;
+    }
+}
+@media screen and (max-width:400px){
+    .container .heading{
+        font-size:17px;
+    }
+}
+@media screen and (max-width:340px){
+    .container .heading{
+        font-size:13px;
+    }
+}
+
+
+
+
+
+
+
